@@ -3,7 +3,7 @@ This project sits at the exciting crossroads of computer vision and NLP, with an
 First Hurdle: Breaking the Language Barrier
 Before I could even think about image-to-text models, I had to get the reports into English. My first thought was to use a standard machine translation model like Facebook's NLLB ("No Language Left Behind"). I was curious to see how a general-purpose tool would handle highly specific medical language it wasn't trained on. As I suspected, the results were a bit clunky. The translations struggled with complex medical terminologies and often sounded unnatural.
 
-This led me to my next experiment: what if I used a smarter, instruction-tuned LLM like Mistral Instruct to not just translate, but to refine the text? (I got this idea from Automatic Speech Recognition, sometimes smaller or older ASR model's outputs are refined by passing them through an LLM) when the I gave it a very specific role to play with a detailed prompt:
+This led me to my next experiment: what if I used a smarter, instruction-tuned LLM like Mistral Instruct to not just translate, but to refine the text? (I got this idea from Automatic Speech Recognition, sometimes smaller or older ASR model's outputs are refined by passing them through an LLM) So I gave it a very specific role to play with a detailed prompt:
 
 "You are a board-certified radiologist... your task is to revise the following chest X-ray report... correct all grammatical errors, use standard medical terminology, and crucially, DO NOT invent any new medical findings..."
 
